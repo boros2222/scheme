@@ -1,0 +1,13 @@
+(define primtenyezo
+	(lambda (n)
+		(if (<= n 1)
+			'()
+			(let oszto ((i n) (o 2))
+				(if (integer? (/ i o))
+					(cons o (primtenyezo (/ i o)))
+					(oszto i (+ o 1))
+				)
+			)
+		)
+	)
+)
